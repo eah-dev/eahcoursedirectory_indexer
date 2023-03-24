@@ -1,8 +1,15 @@
 {
   "name": "ernstabbehochschulejena/eahcoursedirectory_indexer",
   "type": "typo3-cms-extension",
-  "description": "eahcoursedirectory_indexer",
+  "description": "Indexer for ke_search which indexed eahcoursedirectory records",
   "homepage": "https://github.com/eah-dev/eahcoursedirectory_indexer",
+  "keywords": [
+    "TYPO3 CMS",
+    "EAH Jena",
+    "ke_search",
+    "eahcoursedirectory",
+    "indexer"
+  ],
   "authors": [
     {
       "name": "Carsten Hoelbing",
@@ -12,26 +19,18 @@
   ],
   "license": "GPL 2",
   "support": {
-    "issues": "https://github.com/eah-dev/eahcoursedirectory_indexer/issues"
+    "issues": "https://github.com/eah-dev/eahcoursedirectory_indexer/issues",
+    "source": "https://github.com/eah-dev/eahcoursedirectory_indexer"
   },
-  "keywords": ["TYPO3 CMS", "eahjena", "ke_search", "eahcoursedirectory", "indexer"],
   "require": {
-    "php": ">=7.4.0",
-    "typo3/cms-core": "^10.4"
+    "typo3/cms-core": "^10.4",
+    "ernstabbehochschulejena/eahcoursedirectory": "^2||@dev",
+    "tpwd/ke_search": "^4"
   },
   "autoload": {
     "psr-4": {
       "ErnstAbbeHochschuleJena\\EahcoursedirectoryIndexer\\": "Classes"
     }
-  },
-  "replace": {
-    "eahcoursedirectory_indexer": "self.version",
-    "typo3-ter/eahcoursedirectory_indexer": "self.version"
-  },
-  "config": {
-    "optimize-autoloader": true,
-    "vendor-dir": ".Build/vendor",
-    "bin-dir": ".Build/bin"
   },
   "extra": {
     "typo3/cms": {

@@ -24,8 +24,8 @@
     'constraints' => [
         'depends' => [
             'typo3' => '10.4.0-10.4.99',
-            'ke_search' => '2.5.0-0.0.0',
             'eahcoursedirectory' => '2.0.0-0.0.0',
+            'ke_search' => '2.5.0-4.99.0',
         ],
         'conflicts' => [],
         'suggests' => [],
