@@ -34,7 +34,7 @@ class CourseIndexer extends IndexerBase
         $customIndexer = array(
             'course (ext:eahcoursedirectory)',
             CourseIndexer::KEY,
-            'EXT:eahcoursedirectory/Resources/Public/Icons/eah-logo.svg'
+            'EXT:eahcoursedirectory_indexer/Resources/Public/Icons/Extension.svg'
         );
         $params['items'][] = $customIndexer;
     }
@@ -50,7 +50,7 @@ class CourseIndexer extends IndexerBase
     {
         if ($indexerConfig['type'] == CourseIndexer::KEY) {
             $table = 'tx_eahcoursedirectory_domain_model_course';
-            
+
             // Doctrine DBAL using Connection Pool.
             /** @var Connection $connection */
             $connection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable($table);
@@ -59,7 +59,7 @@ class CourseIndexer extends IndexerBase
             if (!isset($indexerConfig['sysfolder'])|| empty($indexerConfig['sysfolder'])) {
                 throw new \Exception('No folder specified. Please set the folder which should be indexed in the indexer configuration!');
             }
-            
+
             // Handle restrictions.
             // Don't fetch hidden or deleted elements, but the elements
             // with frontend user group access restrictions or time (start / stop)
@@ -91,17 +91,17 @@ class CourseIndexer extends IndexerBase
                 // add a fields for the index
                 $content .= strip_tags($record['addinfos'] ?? '');
                 $content .= strip_tags($record['keyfacts'] ?? '');
-                $content .= strip_tags($record['professionalperspectives'] ?? ''); 
-                $content .= strip_tags($record['structure_text'] ?? ''); 
+                $content .= strip_tags($record['professionalperspectives'] ?? '');
+                $content .= strip_tags($record['structure_text'] ?? '');
                 $content .= strip_tags($record['coursespecializationpagetitle'] ?? '');
-                $content .= strip_tags($record['coursespecializationpagetext'] ?? ''); 
+                $content .= strip_tags($record['coursespecializationpagetext'] ?? '');
 
                 $fullContent = $title . "\n" . $abstract . "\n" . $content;
                 //$fullContent = $title . "\n" . $abstract;
 
                 // Link to detail view
-                $params = '&tx_eahcoursedirectory_pi1[course]=' . $record['uid']
-                    . '&tx_eahcoursedirectory_pi1[controller]=Course&tx_eahcoursedirectory_pi1[action]=detail';
+                $params = '&tx_eahcoursedirectory_course[course]=' . $record['uid']
+                    . '&tx_eahcoursedirectory_course[controller]=Course&tx_eahcoursedirectory_course[action]=show';
 
                 // Tags
                 // If you use Sphinx, use "_" instead of "#" (configurable in the extension manager).
@@ -139,7 +139,7 @@ class CourseIndexer extends IndexerBase
                     false,                          // debug only?
                     $additionalFields               // additionalFields
                 );
-                
+
                 $counter++;
             }
 
