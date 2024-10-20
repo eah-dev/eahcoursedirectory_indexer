@@ -26,7 +26,7 @@
   "require": {
     "typo3/cms-core": "^11.5 || ^12.4",
     "ernstabbehochschulejena/eahcoursedirectory": "^2||@dev",
-    "tpwd/ke_search": "^4.0 || ^5.0"
+    "tpwd/ke_search": "^5.0 || ^6.0"
   },
   "autoload": {
     "psr-4": {

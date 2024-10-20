@@ -22,7 +22,7 @@
         'depends' => [
             'typo3' => '11.5.0-12.4.99',
             'eahcoursedirectory' => '2.0.0-0.0.0',
-            'ke_search' => '4.0.0-5.99.99',
+            'ke_search' => '5.0.0-6.99.99',
         ],
     ],
     'autoload' => [
