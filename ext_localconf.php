@@ -1,5 +1,5 @@
 <?php
-defined('TYPO3_MODE') or die();
+defined('TYPO3') or die();
 
 // Register custom indexer.
 // Adjust this to your namespace and class name.
