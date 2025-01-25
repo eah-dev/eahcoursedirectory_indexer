@@ -17,12 +17,12 @@
     'author' => 'Carsten Hoelbing',
     'author_email' => 'carsten.hoelbing@eah-jena.de',
     'state' => 'stable',
-    'version' => '1.1.0',
+    'version' => '2.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '11.5.0-12.4.99',
-            'eahcoursedirectory' => '2.0.0-0.0.0',
-            'ke_search' => '5.0.0-6.99.99',
+            'typo3' => '*',
+            'eahcoursedirectory' => '*',
+            'ke_search' => '*',
         ],
     ],
     'autoload' => [

@@ -22,11 +22,11 @@
     "issues": "https://github.com/eah-dev/eahcoursedirectory_indexer/issues",
     "source": "https://github.com/eah-dev/eahcoursedirectory_indexer"
   },
-  "version": "1.1.0",
+  "version": "2.0.0",
   "require": {
-    "typo3/cms-core": "^11.5 || ^12.4",
+    "typo3/cms-core": "^12 || ^13",
     "ernstabbehochschulejena/eahcoursedirectory": "^2||@dev",
-    "tpwd/ke_search": "^5.0 || ^6.0"
+    "tpwd/ke_search": "^5 || ^6"
   },
   "autoload": {
     "psr-4": {
